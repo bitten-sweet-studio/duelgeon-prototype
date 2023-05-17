@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dw51nnd5hkuk7"
+path="res://.godot/imported/Wood_Slanted_Wall_01.obj-c4fc86fcca35859649f76f78aa5ebc6b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Wood_Slanted_Wall_01.obj-c4fc86fcca35859649f76f78aa5ebc6b.mesh"]
+
+source_file="res://props/Models/Wood_Slanted_Wall_01.obj"
+dest_files=["res://.godot/imported/Wood_Slanted_Wall_01.obj-c4fc86fcca35859649f76f78aa5ebc6b.mesh", "res://.godot/imported/Wood_Slanted_Wall_01.obj-c4fc86fcca35859649f76f78aa5ebc6b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

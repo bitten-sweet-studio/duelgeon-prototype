@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b17erm1kede1a"]
+
+[ext_resource type="ArrayMesh" uid="uid://bicp87bnqkw66" path="res://props/Models/Plate_Road_01.obj" id="1_w8nf8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_edhsg"]
+size = Vector3(2.99718, 0.25, 3.00301)
+
+[node name="PlateRoad" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.50156, 0.121933, -1.50049)
+shape = SubResource("BoxShape3D_edhsg")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_w8nf8")
+skeleton = NodePath("../..")

@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://byvokmny42k4f"]
+
+[ext_resource type="ArrayMesh" uid="uid://c553tigmatc80" path="res://props/Models/Wood_Broken_Wall_01.obj" id="1_ejkat"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o21nf"]
+size = Vector3(0.525278, 1.2528, 2.87015)
+
+[node name="WoodBrokenWall" type="Node3D"]
+transform = Transform3D(0.725745, 0, 0, 0, 0.725745, 0, 0, 0, 0.725745, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.239076, 0.633196, -1.5298)
+shape = SubResource("BoxShape3D_o21nf")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_ejkat")
+skeleton = NodePath("../../..")

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dli3n2p1by3xf"
+path="res://.godot/imported/Plate_Corner_01.obj-5b412fb35be12ec648ddcb27b020acf3.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Plate_Corner_01.obj-5b412fb35be12ec648ddcb27b020acf3.mesh"]
+
+source_file="res://props/Models/Plate_Corner_01.obj"
+dest_files=["res://.godot/imported/Plate_Corner_01.obj-5b412fb35be12ec648ddcb27b020acf3.mesh", "res://.godot/imported/Plate_Corner_01.obj-5b412fb35be12ec648ddcb27b020acf3.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

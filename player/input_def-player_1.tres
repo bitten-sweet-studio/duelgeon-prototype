@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="PlayerInputDefinition" load_steps=2 format=3 uid="uid://d03bbrvt1t3p"]
+
+[ext_resource type="Script" path="res://scripts/player_input_definition.gd" id="1_eaguj"]
+
+[resource]
+script = ExtResource("1_eaguj")
+is_input_enabled = true
+move_left_input = "p1_move_left"
+move_right_input = "p1_move_right"
+move_up_input = "p1_move_up"
+move_down_input = "p1_move_down"
+aim_left_input = "p1_aim_left"
+aim_right_input = "p1_aim_right"
+aim_up_input = "p1_aim_up"
+aim_down_input = "p1_aim_down"
+use_mouse_instead = false
+dodge_input = "p1_dodge"
+shoot_input = "p1_shoot"

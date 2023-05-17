@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cghvskowyb2uq"
+path="res://.godot/imported/Wood_Window_Round_01.obj-72c5a4fd20bb2ebb84acad6e1bdeb68a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Wood_Window_Round_01.obj-72c5a4fd20bb2ebb84acad6e1bdeb68a.mesh"]
+
+source_file="res://props/Models/Wood_Window_Round_01.obj"
+dest_files=["res://.godot/imported/Wood_Window_Round_01.obj-72c5a4fd20bb2ebb84acad6e1bdeb68a.mesh", "res://.godot/imported/Wood_Window_Round_01.obj-72c5a4fd20bb2ebb84acad6e1bdeb68a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

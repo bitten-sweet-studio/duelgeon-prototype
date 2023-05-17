@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://tdqmhvktxrxy"
+path="res://.godot/imported/Grey_Window_Narrow_01.obj-b7db388a4a663f155553e584f7818bae.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Grey_Window_Narrow_01.obj-b7db388a4a663f155553e584f7818bae.mesh"]
+
+source_file="res://props/Models/Grey_Window_Narrow_01.obj"
+dest_files=["res://.godot/imported/Grey_Window_Narrow_01.obj-b7db388a4a663f155553e584f7818bae.mesh", "res://.godot/imported/Grey_Window_Narrow_01.obj-b7db388a4a663f155553e584f7818bae.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

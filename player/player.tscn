@@ -1,0 +1,33 @@
+[gd_scene load_steps=8 format=3 uid="uid://1yubh8gp5hqe"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_0vj1t"]
+[ext_resource type="Script" path="res://scripts/character_body_movement.gd" id="2_75ygu"]
+[ext_resource type="Texture2D" uid="uid://difhpex0jehsb" path="res://libraries/textures/icon.svg" id="2_clxu8"]
+[ext_resource type="PackedScene" uid="uid://cdrnp4b40vgnd" path="res://gun/gun.tscn" id="3_evmmp"]
+[ext_resource type="Script" path="res://scripts/player_input.gd" id="3_kts0c"]
+[ext_resource type="Resource" uid="uid://d03bbrvt1t3p" path="res://player/input_def-player_1.tres" id="4_06tha"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jqmjb"]
+radius = 68.4763
+
+[node name="player" type="CharacterBody2D"]
+collision_mask = 3
+script = ExtResource("1_0vj1t")
+metadata/_edit_vertical_guides_ = []
+
+[node name="sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_clxu8")
+
+[node name="hurtbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_jqmjb")
+
+[node name="movement" type="Node" parent="." node_paths=PackedStringArray("character_body")]
+script = ExtResource("2_75ygu")
+character_body = NodePath("..")
+speed = 700.0
+
+[node name="input" type="Node" parent="."]
+script = ExtResource("3_kts0c")
+definition = ExtResource("4_06tha")
+
+[node name="gun" parent="." instance=ExtResource("3_evmmp")]

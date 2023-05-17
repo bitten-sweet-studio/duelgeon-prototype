@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://tqnij4fyi85o"
+path="res://.godot/imported/Grey_Pole_01.obj-d6a9938b8aa92edc81d6a9d4f659744e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Grey_Pole_01.obj-d6a9938b8aa92edc81d6a9d4f659744e.mesh"]
+
+source_file="res://props/Models/Grey_Pole_01.obj"
+dest_files=["res://.godot/imported/Grey_Pole_01.obj-d6a9938b8aa92edc81d6a9d4f659744e.mesh", "res://.godot/imported/Grey_Pole_01.obj-d6a9938b8aa92edc81d6a9d4f659744e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

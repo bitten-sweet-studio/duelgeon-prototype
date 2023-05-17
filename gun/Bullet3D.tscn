@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://fvceg87oix8q"]
+
+[ext_resource type="Script" path="res://scripts/Bullet3D.gd" id="1_ax4s1"]
+[ext_resource type="Script" path="res://scripts/Hitbox3D.gd" id="2_51qe6"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_dcsac"]
+radius = 0.3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wdbfi"]
+albedo_color = Color(0.678431, 0.027451, 0.0392157, 1)
+
+[node name="Bullet3D" type="Node3D" node_paths=PackedStringArray("hitbox")]
+script = ExtResource("1_ax4s1")
+hitbox = NodePath("Hitbox")
+
+[node name="Hitbox" type="Area3D" parent="." node_paths=PackedStringArray("parent")]
+collision_layer = 2
+collision_mask = 12
+script = ExtResource("2_51qe6")
+parent = NodePath("..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hitbox"]
+shape = SubResource("SphereShape3D_dcsac")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000833511, 0.00135735, -0.00156426)
+radius = 0.3
+material = SubResource("StandardMaterial3D_wdbfi")
+
+[connection signal="body_entered" from="Hitbox" to="Hitbox" method="_on_body_entered"]

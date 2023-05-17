@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cihegudtk6rpt"
+path="res://.godot/imported/Roof_Inner_Corner_Red_01.obj-333995bad7c2af589b072439189450d7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Roof_Inner_Corner_Red_01.obj-333995bad7c2af589b072439189450d7.mesh"]
+
+source_file="res://props/Models/Roof_Inner_Corner_Red_01.obj"
+dest_files=["res://.godot/imported/Roof_Inner_Corner_Red_01.obj-333995bad7c2af589b072439189450d7.mesh", "res://.godot/imported/Roof_Inner_Corner_Red_01.obj-333995bad7c2af589b072439189450d7.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

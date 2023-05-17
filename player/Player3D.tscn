@@ -1,0 +1,73 @@
+[gd_scene load_steps=10 format=3 uid="uid://d1gyxdn4mklbx"]
+
+[ext_resource type="PackedScene" uid="uid://dde3lklfkqykh" path="res://player/AdvancedCharacterModel.tscn" id="1_ej3tl"]
+[ext_resource type="Script" path="res://scripts/Player3D.gd" id="1_wupmh"]
+[ext_resource type="PackedScene" uid="uid://c1mlxiyx612fs" path="res://gun/Gun3D.tscn" id="2_r12lb"]
+[ext_resource type="Script" path="res://scripts/player_input.gd" id="4_cykiq"]
+[ext_resource type="Resource" uid="uid://d03bbrvt1t3p" path="res://player/input_def-player_1.tres" id="5_staei"]
+[ext_resource type="Script" path="res://scripts/CharacterBodyMovement3D.gd" id="6_ectfd"]
+[ext_resource type="Script" path="res://scripts/DodgeComponent3D.gd" id="7_prmgv"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5wunt"]
+radius = 0.436977
+height = 1.41431
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qdaup"]
+transparency = 1
+cull_mode = 1
+albedo_color = Color(0.6, 0.341176, 0.592157, 1)
+
+[node name="Player3D" type="CharacterBody3D" node_paths=PackedStringArray("input_component", "movement_component", "dodge_component", "gun")]
+collision_layer = 9
+collision_mask = 7
+script = ExtResource("1_wupmh")
+input_component = NodePath("Input")
+movement_component = NodePath("Movement")
+dodge_component = NodePath("DodgeComponent3D")
+gun = NodePath("Gun")
+metadata/_edit_group_ = true
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.593098, 0)
+shape = SubResource("CapsuleShape3D_5wunt")
+
+[node name="Model" parent="." instance=ExtResource("1_ej3tl")]
+transform = Transform3D(1.30273, 0, 0, 0, 0.674675, 0, 0, 0, 1.44013, 0, 0, 0)
+
+[node name="Skeleton3D" parent="Model/RootNode" index="0"]
+bones/4/position = Vector3(-0.02, 1.42663e-16, 4.32088e-05)
+bones/4/rotation = Quaternion(0.710337, -0.689939, 0.117356, 0.0750505)
+bones/5/position = Vector3(0.0202351, 0.00951531, -8.07344e-09)
+bones/5/rotation = Quaternion(-0.106519, 0.537582, -0.109312, 0.829283)
+bones/18/rotation = Quaternion(0.073475, 1.00048, 0.00147497, 0.000474975)
+bones/22/rotation = Quaternion(0.000474975, -0.00152503, 1.00048, -0.062525)
+
+[node name="Gun" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_r12lb")]
+transform = Transform3D(1.45124, 0, 0, 0, 0.858415, 0, 0, 0, 0.67829, -0.312383, 0.682651, 0.535756)
+player = NodePath("..")
+
+[node name="Input" type="Node" parent="."]
+script = ExtResource("4_cykiq")
+definition = ExtResource("5_staei")
+
+[node name="Movement" type="Node" parent="." node_paths=PackedStringArray("character_body")]
+script = ExtResource("6_ectfd")
+character_body = NodePath("..")
+speed = 5.0
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.787969, 0.0911779)
+visible = false
+radius = 0.757274
+height = 1.56091
+material = SubResource("StandardMaterial3D_qdaup")
+
+[node name="DodgeComponent3D" type="Node" parent="." node_paths=PackedStringArray("char_body_movement", "visual", "collision_shape")]
+script = ExtResource("7_prmgv")
+interval = 0.1
+speed = 20.0
+char_body_movement = NodePath("../Movement")
+visual = NodePath("../CSGCylinder3D")
+collision_shape = NodePath("../Collision")
+
+[editable path="Model"]

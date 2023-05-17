@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://535414mp0k4q"
+path="res://.godot/imported/Grey_Small_Wall_01.obj-70236b8e99a2e4d80aec7c14c3e9e402.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Grey_Small_Wall_01.obj-70236b8e99a2e4d80aec7c14c3e9e402.mesh"]
+
+source_file="res://props/Models/Grey_Small_Wall_01.obj"
+dest_files=["res://.godot/imported/Grey_Small_Wall_01.obj-70236b8e99a2e4d80aec7c14c3e9e402.mesh", "res://.godot/imported/Grey_Small_Wall_01.obj-70236b8e99a2e4d80aec7c14c3e9e402.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

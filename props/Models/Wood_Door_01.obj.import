@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cfcjm8xskm87g"
+path="res://.godot/imported/Wood_Door_01.obj-6029126e56762ffe49b09a5955a2d233.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Wood_Door_01.obj-6029126e56762ffe49b09a5955a2d233.mesh"]
+
+source_file="res://props/Models/Wood_Door_01.obj"
+dest_files=["res://.godot/imported/Wood_Door_01.obj-6029126e56762ffe49b09a5955a2d233.mesh", "res://.godot/imported/Wood_Door_01.obj-6029126e56762ffe49b09a5955a2d233.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

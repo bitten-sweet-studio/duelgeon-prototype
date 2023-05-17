@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bcjj34pqb8j4"
+path="res://.godot/imported/Wood_Pole_01.obj-26cbb1605a2d7532ec3af46307807ebf.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Wood_Pole_01.obj-26cbb1605a2d7532ec3af46307807ebf.mesh"]
+
+source_file="res://props/Models/Wood_Pole_01.obj"
+dest_files=["res://.godot/imported/Wood_Pole_01.obj-26cbb1605a2d7532ec3af46307807ebf.mesh", "res://.godot/imported/Wood_Pole_01.obj-26cbb1605a2d7532ec3af46307807ebf.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

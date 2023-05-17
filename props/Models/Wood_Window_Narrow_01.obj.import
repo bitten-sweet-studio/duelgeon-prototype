@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://1xh6jfiqu4jo"
+path="res://.godot/imported/Wood_Window_Narrow_01.obj-74d802677065ced16bd1b3e6983b6e08.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Wood_Window_Narrow_01.obj-74d802677065ced16bd1b3e6983b6e08.mesh"]
+
+source_file="res://props/Models/Wood_Window_Narrow_01.obj"
+dest_files=["res://.godot/imported/Wood_Window_Narrow_01.obj-74d802677065ced16bd1b3e6983b6e08.mesh", "res://.godot/imported/Wood_Window_Narrow_01.obj-74d802677065ced16bd1b3e6983b6e08.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

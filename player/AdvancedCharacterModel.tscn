@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://dde3lklfkqykh"]
+
+[ext_resource type="PackedScene" uid="uid://ctfvf1olmy3lp" path="res://player/advancedCharacter.fbx" id="1_urdn2"]
+[ext_resource type="Material" uid="uid://bt5g885qq4b64" path="res://player/mat-robot.tres" id="2_egd1k"]
+
+[node name="AdvancedCharacterModel" instance=ExtResource("1_urdn2")]
+
+[node name="RootNode" parent="." index="0"]
+transform = Transform3D(10.9662, 0, 0, 0, 10.9662, 0, 0, 0, 10.9662, 0, 0, 0)
+
+[node name="Body1" parent="RootNode/Skeleton3D" index="0"]
+surface_material_override/0 = ExtResource("2_egd1k")
+
+[node name="Head1" parent="RootNode/Skeleton3D" index="1"]
+surface_material_override/0 = ExtResource("2_egd1k")
+
+[node name="ArmLeft1" parent="RootNode/Skeleton3D" index="2"]
+surface_material_override/0 = ExtResource("2_egd1k")
+
+[node name="ArmRight1" parent="RootNode/Skeleton3D" index="3"]
+surface_material_override/0 = ExtResource("2_egd1k")
+
+[node name="LegLeft1" parent="RootNode/Skeleton3D" index="4"]
+surface_material_override/0 = ExtResource("2_egd1k")
+
+[node name="LegRight1" parent="RootNode/Skeleton3D" index="5"]
+surface_material_override/0 = ExtResource("2_egd1k")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1mlxiyx612fs"]
+
+[ext_resource type="Script" path="res://scripts/Gun3D.gd" id="1_gi6vk"]
+[ext_resource type="PackedScene" uid="uid://b7owtlyudkign" path="res://gun/BlasterH.glb" id="1_srps6"]
+[ext_resource type="PackedScene" uid="uid://fvceg87oix8q" path="res://gun/Bullet3D.tscn" id="2_5mk3w"]
+
+[node name="Gun" type="Node3D" node_paths=PackedStringArray("bullet_spawn_point")]
+script = ExtResource("1_gi6vk")
+bullet_spawn_point = NodePath("Tip")
+bullet_scene = ExtResource("2_5mk3w")
+bullet_speed = 10.0
+
+[node name="Tip" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125068, 0.968352)
+
+[node name="Model" parent="." instance=ExtResource("1_srps6")]
+transform = Transform3D(1.52423, 0, 0, 0, 1.52423, 0, 0, 0, 1.52423, 0, 0.111358, 0.325838)

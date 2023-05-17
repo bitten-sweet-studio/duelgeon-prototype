@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://duil6kwmmt4qg"
+path="res://.godot/imported/Shield_Green_01.obj-4306cf6cdf3816103cb3f463f6dc78a7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Shield_Green_01.obj-4306cf6cdf3816103cb3f463f6dc78a7.mesh"]
+
+source_file="res://props/Models/Shield_Green_01.obj"
+dest_files=["res://.godot/imported/Shield_Green_01.obj-4306cf6cdf3816103cb3f463f6dc78a7.mesh", "res://.godot/imported/Shield_Green_01.obj-4306cf6cdf3816103cb3f463f6dc78a7.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

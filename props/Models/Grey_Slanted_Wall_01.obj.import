@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://0iefgkcshnpq"
+path="res://.godot/imported/Grey_Slanted_Wall_01.obj-67269282755a649d157ff83199938791.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Grey_Slanted_Wall_01.obj-67269282755a649d157ff83199938791.mesh"]
+
+source_file="res://props/Models/Grey_Slanted_Wall_01.obj"
+dest_files=["res://.godot/imported/Grey_Slanted_Wall_01.obj-67269282755a649d157ff83199938791.mesh", "res://.godot/imported/Grey_Slanted_Wall_01.obj-67269282755a649d157ff83199938791.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
