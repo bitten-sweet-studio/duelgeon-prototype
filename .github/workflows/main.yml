@@ -9,9 +9,9 @@ on:
       - "game/**"
 
 env:
-  EXPORT_NAME: paper-duel
+  EXPORT_NAME: duelgeon
   GODOT_VERSION: 4.0.2
-  PROJECT_PATH: game
+  PROJECT_PATH: .
 
 permissions:
   contents: write
