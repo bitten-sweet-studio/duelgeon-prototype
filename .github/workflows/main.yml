@@ -1,0 +1,96 @@
+name: "🚀 Build and Deploy"
+on:
+  push:
+    branches:
+      - main
+
+    paths:
+      - ".github/**"
+      - "game/**"
+
+env:
+  EXPORT_NAME: paper-duel
+  GODOT_VERSION: 4.0.2
+  PROJECT_PATH: game
+
+permissions:
+  contents: write
+
+jobs:
+  desktop-exports:
+    name: 📦 Build
+    strategy:
+      matrix:
+        platform: [linux, mac, windows]
+        include:
+          - platform: linux
+            extension: x86_64
+
+          - platform: mac
+            extension: zip
+
+          - platform: windows
+            extension: exe
+
+    runs-on: ubuntu-20.04
+    container: niscolas/godot-ci:4.0.2
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          lfs: true
+
+      - name: Setup
+        run: |
+          mkdir -v -p ~/.local/share/godot/templates
+          mv /root/.local/share/godot/templates/${GODOT_VERSION}.stable ~/.local/share/godot/templates/${GODOT_VERSION}.stable
+
+      - name: Build
+        run: |
+          mkdir -v -p build/${{ matrix.platform }}
+          cd $PROJECT_PATH
+          godot -v --export ${{ matrix.platform }} ../build/${{ matrix.platform }}/${EXPORT_NAME}.${{ matrix.extension }} 2>&1 | tee ${{ matrix.platform }}-export.log
+
+          export BUTLER_API_KEY=${{ secrets.BUTLER_API_KEY }}
+          export ITCHIO_USERNAME=${{ secrets.ITCHIO_USERNAME }}
+          export ITCHIO_GAME=${{ secrets.ITCHIO_GAME }}
+          butler push ../build/${{ matrix.platform }} $ITCHIO_USERNAME/$ITCHIO_GAME:${{ matrix.platform }}
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: ${{ matrix.platform }}
+          path: build/${{ matrix.platform }}
+
+  export-web:
+    name: 🌐 Web Export
+    runs-on: ubuntu-20.04
+    container:
+      image: barichello/godot-ci:4.0.2
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          lfs: true
+      - name: Setup
+        run: |
+          mkdir -v -p ~/.local/share/godot/templates
+          mv /root/.local/share/godot/templates/${GODOT_VERSION}.stable ~/.local/share/godot/templates/${GODOT_VERSION}.stable
+      - name: Web Build
+        run: |
+          mkdir -v -p build/web
+          cd $PROJECT_PATH
+          godot -v --export "web" ../build/web/index.html
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: web
+          path: build/web
+      - name: Install rsync 📚
+        run: |
+          apt-get update && apt-get install -y rsync
+      - name: Deploy to GitHub Pages 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v4
+        with:
+          folder: build/web
+          target-folder: dev
