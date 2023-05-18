@@ -40,11 +40,14 @@ jobs:
         with:
           lfs: true
 
+      - name: Godot Project Setup
+        run: godot -v -e --headless --quit
+
       - name: Build
         run: |
           mkdir -v -p build/${{ matrix.platform }}
           cd $PROJECT_PATH
-          godot -v --export-release --headless ${{ matrix.platform }} ../build/${{ matrix.platform }}/${EXPORT_NAME}.${{ matrix.extension }}
+          godot -v --export-debug --headless ${{ matrix.platform }} ../build/${{ matrix.platform }}/${EXPORT_NAME}.${{ matrix.extension }}
 
       - name: Upload to Itch.io
         run: |
@@ -69,19 +72,26 @@ jobs:
         uses: actions/checkout@v2
         with:
           lfs: true
+
+      - name: Godot Project Setup
+        run: godot -v -e --headless --quit
+
       - name: Web Build
         run: |
           mkdir -v -p build/web
           cd $PROJECT_PATH
-          godot -v --export-release --headless "web" ../build/web/index.html
+          godot -v --export-debug --headless "web" ../build/web/index.html
+
       - name: Upload Artifact
         uses: actions/upload-artifact@v1
         with:
           name: web
           path: build/web
+
       - name: Install rsync 📚
         run: |
           apt-get update && apt-get install -y rsync
+
       - name: Deploy to GitHub Pages 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
