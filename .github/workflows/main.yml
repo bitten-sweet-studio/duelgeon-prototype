@@ -40,9 +40,6 @@ jobs:
         with:
           lfs: true
 
-      - name: 🤖 Godot Project Setup
-        run: godot -v -e --headless --quit
-
       - name: Build
         run: |
           mkdir -v -p build/${{ matrix.platform }}
@@ -72,9 +69,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           lfs: true
-
-      - name: 🤖 Godot Project Setup
-        run: godot -v -e --headless --quit
 
       - name: Web Build
         run: |
