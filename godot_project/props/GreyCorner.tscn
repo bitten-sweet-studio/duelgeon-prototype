@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bclfpxtm4dwvx"]
+
+[ext_resource type="ArrayMesh" uid="uid://mbgngqactnvn" path="res://props/Models/Grey_Corner_01.obj" id="1_0n4hn"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v6j5j"]
+size = Vector3(0.69982, 2.28344, 3.88294)
+
+[node name="GreyCorner01" type="Node3D"]
+
+[node name="Model" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -2, 0, -2)
+mesh = ExtResource("1_0n4hn")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0930519, 1.07088, -1.85245)
+shape = SubResource("BoxShape3D_v6j5j")

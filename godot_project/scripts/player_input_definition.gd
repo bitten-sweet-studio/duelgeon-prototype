@@ -31,7 +31,7 @@ func get_movement_input() -> Vector2:
 	return result
 
 
-func get_aim_input(aimer: Node2D) -> Vector2:
+func get_aim_input(aimer: Node3D) -> Vector2:
 	if !is_input_enabled:
 		return Vector2.ZERO
 

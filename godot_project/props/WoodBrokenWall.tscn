@@ -1,14 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://byvokmny42k4f"]
+[gd_scene load_steps=5 format=3 uid="uid://byvokmny42k4f"]
 
 [ext_resource type="ArrayMesh" uid="uid://c553tigmatc80" path="res://props/Models/Wood_Broken_Wall_01.obj" id="1_ejkat"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_o21nf"]
-size = Vector3(0.525278, 1.2528, 2.87015)
+size = Vector3(0.525278, 0.71656, 2.87015)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gg8ne"]
+size = Vector3(0.525278, 0.71656, 1.41648)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2e0yx"]
+size = Vector3(0.525278, 0.71656, 1.41648)
 
 [node name="WoodBrokenWall" type="Node3D"]
 transform = Transform3D(0.725745, 0, 0, 0, 0.725745, 0, 0, 0, 0.725745, 0, 0, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 4
+collision_mask = 0
 axis_lock_linear_x = true
 axis_lock_linear_y = true
 axis_lock_linear_z = true
@@ -17,8 +25,36 @@ axis_lock_angular_y = true
 axis_lock_angular_z = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.239076, 0.633196, -1.5298)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.239076, 0.383531, -1.5298)
 shape = SubResource("BoxShape3D_o21nf")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="StaticBody3D"]
+collision_layer = 4
+collision_mask = 0
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.239076, 1.4725, -0.377696)
+shape = SubResource("BoxShape3D_gg8ne")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="StaticBody3D"]
+collision_layer = 4
+collision_mask = 0
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D/StaticBody3D3"]
+transform = Transform3D(1, 0, 0, 0, 0.649222, 0.760599, 0, -0.760599, 0.649222, 0.239076, 1.18457, -0.72564)
+shape = SubResource("BoxShape3D_2e0yx")
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_ejkat")

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c07jgq48y56xq"
-path.s3tc="res://.godot/imported/skin_man.png-b98db0d8f4e71c155b8d2c808bd71d00.s3tc.ctex"
+uid="uid://yn0l42edvmef"
+path.bptc="res://.godot/imported/skin_orc.png-7c0adda87f6873bd5f6e450a51a090ab.bptc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,13 +11,13 @@ metadata={
 
 [deps]
 
-source_file="res://player/skins/skin_man.png"
-dest_files=["res://.godot/imported/skin_man.png-b98db0d8f4e71c155b8d2c808bd71d00.s3tc.ctex"]
+source_file="res://player/skins/skin_orc.png"
+dest_files=["res://.godot/imported/skin_orc.png-7c0adda87f6873bd5f6e450a51a090ab.bptc.ctex"]
 
 [params]
 
 compress/mode=2
-compress/high_quality=false
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0

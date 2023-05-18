@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cavl2ec75gakx"]
+
+[ext_resource type="Texture2D" uid="uid://yn0l42edvmef" path="res://player/skins/skin_orc.png" id="1_uuyoa"]
+
+[resource]
+albedo_texture = ExtResource("1_uuyoa")

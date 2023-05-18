@@ -11,5 +11,8 @@ func _ready() -> void:
 
 func shoot_loop() -> void:
 	while true:
+		if gun == null:
+			break
+
 		gun.shoot()
 		await get_tree().create_timer(interval).timeout

@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_e7t8s")
-is_input_enabled = false
+is_input_enabled = true
 move_left_input = "p2_move_left"
 move_right_input = "p2_move_right"
 move_up_input = "p2_move_up"
@@ -13,6 +13,6 @@ aim_left_input = "p2_aim_left"
 aim_right_input = "p2_aim_right"
 aim_up_input = "p2_aim_up"
 aim_down_input = "p2_aim_down"
-use_mouse_instead = true
+use_mouse_instead = false
 dodge_input = "p2_dodge"
 shoot_input = "p2_shoot"

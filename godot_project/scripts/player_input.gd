@@ -8,12 +8,12 @@ func get_movement_input() -> Vector2:
 	return definition.get_movement_input()
 
 
-func get_aim_input(aimer: Node2D) -> Vector2:
+func get_aim_input(aimer: Node3D) -> Vector2:
 	return definition.get_aim_input(aimer)
 
 
 func get_aim_input_3d(aimer: Node3D) -> Vector2:
-	return definition.get_aim_input(null)
+	return definition.get_aim_input(aimer)
 
 
 func get_shoot_input() -> bool:
