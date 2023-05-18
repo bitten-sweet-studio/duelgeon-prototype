@@ -49,7 +49,7 @@ jobs:
         run: |
           mkdir -v -p build/${{ matrix.platform }}
           cd $PROJECT_PATH
-          godot --export-debug --verbose --headless ${{ matrix.platform }} ../build/${{ matrix.platform }}/${EXPORT_NAME}.${{ matrix.extension }}
+          godot --export-debug --verbose ${{ matrix.platform }} ../build/${{ matrix.platform }}/${EXPORT_NAME}.${{ matrix.extension }}
 
       - name: Upload to Itch.io
         run: |
@@ -82,7 +82,7 @@ jobs:
         run: |
           mkdir -v -p build/web
           cd $PROJECT_PATH
-          godot --export-debug --verbose --headless "web" ../build/web/index.html
+          godot --export-debug --verbose "web" ../build/web/index.html
       - name: Upload Artifact
         uses: actions/upload-artifact@v1
         with:
