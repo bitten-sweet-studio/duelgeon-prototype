@@ -20,7 +20,7 @@ jobs: # the things to do
       image: ghcr.io/bend-n/godot:4.0.2 # the container to use
       export-name: "duelgeon" # the name of the exec. ($export-name.exe)
       platforms: "windows linux web mac" # space seperated list of platforms to build
-      project-root-path: "." # the directory that project.godot is in
+      project-root-path: "godot_project" # the directory that project.godot is in
       github-pages: "no" # to deploy to github pages or not (anything besides 'true' == false)
       itch-path: "bitten-sweet-studio/duelgeon" # required for itch.io deployment.
     secrets: # secrets
