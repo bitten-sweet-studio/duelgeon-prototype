@@ -6,7 +6,7 @@ on:
 
     paths:
       - ".github/**"
-      - "game/**"
+      - "godot_project/**"
 
 env:
   EXPORT_NAME: duelgeon
