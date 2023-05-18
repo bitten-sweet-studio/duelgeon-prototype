@@ -49,8 +49,10 @@ jobs:
         run: |
           mkdir -v -p build/${{ matrix.platform }}
           cd $PROJECT_PATH
-          godot -v --export ${{ matrix.platform }} ../build/${{ matrix.platform }}/${EXPORT_NAME}.${{ matrix.extension }} 2>&1 | tee ${{ matrix.platform }}-export.log
+          godot -v --export ${{ matrix.platform }} ../build/${{ matrix.platform }}/${EXPORT_NAME}.${{ matrix.extension }}
 
+      - name: Upload to Itch.io
+        run: |
           export BUTLER_API_KEY=${{ secrets.BUTLER_API_KEY }}
           export ITCHIO_USERNAME=${{ secrets.ITCHIO_USERNAME }}
           export ITCHIO_GAME=${{ secrets.ITCHIO_GAME }}
