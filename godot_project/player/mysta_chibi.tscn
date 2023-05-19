@@ -1,0 +1,75 @@
+[gd_scene load_steps=4 format=3 uid="uid://dts6lgb7fcdgq"]
+
+[ext_resource type="PackedScene" uid="uid://r0nx62o1vg1u" path="res://player/mysta_chibi.glb" id="1_3lsye"]
+[ext_resource type="Texture2D" uid="uid://dby5ei4jtxu7h" path="res://player/Mysta_texture.png" id="2_22lvm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pv7a3"]
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_22lvm")
+
+[node name="mysta_chibi" instance=ExtResource("1_3lsye")]
+transform = Transform3D(0.989024, -0.147758, 0, 0.142895, 0.956475, 0.254433, -0.0375944, -0.25164, 0.96709, 0, 0, 0)
+
+[node name="rig" parent="." index="0"]
+transform = Transform3D(0.972062, 0.00833367, -0.234575, -0.0486353, 0.984832, -0.166554, 0.229629, 0.173309, 0.957724, 0.00799973, -0.104961, -0.136216)
+
+[node name="GeneralSkeleton" parent="rig" index="0"]
+transform = Transform3D(0.958843, 0.22121, -0.178012, -0.24671, 0.959406, -0.136653, 0.140557, 0.174946, 0.974494, -0.0533852, 0.126812, -0.0999165)
+bones/8/rotation = Quaternion(0.0241831, -0.107778, -0.522809, 0.845263)
+bones/9/rotation = Quaternion(0.0386477, -0.0476877, 0.856969, 0.5117)
+bones/10/rotation = Quaternion(0.0729623, -0.0629823, 0.0816253, 0.991992)
+bones/11/rotation = Quaternion(-0.420193, -0.56861, -0.420199, 0.568817)
+bones/14/rotation = Quaternion(-0.131587, -0.00637524, 0.242008, 0.961289)
+bones/15/rotation = Quaternion(0.0647969, 0.0184473, -0.724668, 0.685797)
+bones/16/rotation = Quaternion(-0.056949, 0.134019, 0.44886, 0.881658)
+bones/17/rotation = Quaternion(-0.449825, 0.545572, 0.449782, 0.545624)
+bones/19/rotation = Quaternion(0.0626442, 0.0405108, 0.0165762, 0.997076)
+bones/20/rotation = Quaternion(0.00525765, -0.0146175, 0.0422348, 0.998987)
+bones/21/rotation = Quaternion(-0.0246488, -0.0513743, -0.0261502, 0.998032)
+bones/22/rotation = Quaternion(0.0403408, 0.00827131, 0.00510188, 0.999138)
+bones/23/rotation = Quaternion(0.03687, -0.00520582, 0.0050763, 0.999291)
+bones/43/rotation = Quaternion(0.979717, -0.163911, -0.00527649, 0.115153)
+bones/44/rotation = Quaternion(-0.0229131, -0.130107, -0.0399417, 0.99043)
+bones/72/rotation = Quaternion(-0.596915, 0.378079, 0.581541, 0.403186)
+bones/74/rotation = Quaternion(-0.171133, 0.118272, 0.743408, 0.635664)
+bones/75/rotation = Quaternion(0.0104569, -0.0598569, 0.356428, 0.932345)
+bones/76/rotation = Quaternion(0.120002, 0.476632, -0.0551943, 0.869123)
+bones/78/rotation = Quaternion(-0.484311, 0.141336, -0.176902, 0.845088)
+bones/79/rotation = Quaternion(-0.626338, -0.0528251, 0.0323565, 0.777087)
+bones/80/rotation = Quaternion(-0.460122, -0.0170121, -0.0398441, 0.886798)
+bones/82/rotation = Quaternion(-0.454508, 0.0820608, -0.119652, 0.878847)
+bones/83/rotation = Quaternion(-0.785744, 0.0245995, -0.0900174, 0.611472)
+bones/84/rotation = Quaternion(-0.51254, -0.0177864, -0.0121316, 0.858393)
+bones/86/rotation = Quaternion(-0.431457, 0.0358741, -0.145553, 0.889591)
+bones/87/rotation = Quaternion(-0.851787, 0.0403309, -0.114973, 0.509523)
+bones/88/rotation = Quaternion(-0.144934, -0.00344897, -0.0049179, 0.989423)
+bones/90/rotation = Quaternion(-0.227148, 0.00886031, -0.0680606, 0.971439)
+bones/91/rotation = Quaternion(-0.302618, -0.0218603, 0.0457193, 0.951764)
+bones/92/rotation = Quaternion(-0.438039, 0.0480729, -0.178486, 0.879746)
+bones/94/rotation = Quaternion(-0.0253223, -0.688652, 0.359505, 0.629185)
+bones/95/rotation = Quaternion(-0.288848, -0.0637568, -0.077871, 0.95207)
+bones/97/rotation = Quaternion(-0.592377, -0.364652, -0.581409, 0.421997)
+bones/99/rotation = Quaternion(-0.238819, -0.201341, -0.54928, 0.77506)
+bones/100/rotation = Quaternion(0.0204596, 0.117107, -0.55538, 0.823056)
+bones/101/rotation = Quaternion(0.167306, -0.637786, 0.0964465, 0.745611)
+bones/103/rotation = Quaternion(-0.568363, -0.201653, 0.118047, 0.788901)
+bones/104/rotation = Quaternion(-0.213544, 0.0018333, -0.087655, 0.972991)
+bones/105/rotation = Quaternion(-0.123316, 0.017865, 0.0103956, 0.992152)
+bones/107/rotation = Quaternion(-0.455294, -0.0895201, 0.0979456, 0.880398)
+bones/108/rotation = Quaternion(-0.504469, -0.0144709, 0.0827103, 0.859337)
+bones/109/rotation = Quaternion(-0.279694, 0.0105423, -0.00602135, 0.960012)
+bones/111/rotation = Quaternion(-0.450923, -0.0516284, 0.0885091, 0.886662)
+bones/112/rotation = Quaternion(-0.577163, -0.0267337, 0.110816, 0.808633)
+bones/113/rotation = Quaternion(-0.133026, 0.00327315, 0.00683517, 0.991084)
+bones/115/rotation = Quaternion(-0.323083, -0.0143884, 0.0622415, 0.944212)
+bones/116/rotation = Quaternion(-0.474258, 0.0363618, -0.00942827, 0.879584)
+bones/117/rotation = Quaternion(-0.348117, -0.0354977, 0.174619, 0.92036)
+bones/119/rotation = Quaternion(0.148894, 0.594046, -0.239122, 0.753499)
+bones/120/rotation = Quaternion(-0.0758044, -0.0143588, -0.0123716, 0.996943)
+
+[node name="mysta_chibi2" parent="rig/GeneralSkeleton" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_pv7a3")
+
+[node name="AnimationPlayer" parent="." index="1"]
+method_call_mode = 1

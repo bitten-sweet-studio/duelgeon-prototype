@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://d1gyxdn4mklbx"]
+[gd_scene load_steps=10 format=3 uid="uid://d1gyxdn4mklbx"]
 
 [ext_resource type="Script" path="res://scripts/Player3D.gd" id="1_wupmh"]
 [ext_resource type="PackedScene" uid="uid://c1mlxiyx612fs" path="res://gun/Gun3D.tscn" id="2_r12lb"]
@@ -6,8 +6,7 @@
 [ext_resource type="Resource" uid="uid://d03bbrvt1t3p" path="res://player/input_def-player_1.tres" id="5_staei"]
 [ext_resource type="Script" path="res://scripts/CharacterBodyMovement3D.gd" id="6_ectfd"]
 [ext_resource type="Script" path="res://scripts/DodgeComponent3D.gd" id="7_prmgv"]
-[ext_resource type="PackedScene" uid="uid://bikjfqfqhtuh6" path="res://player/advanced_character.tscn" id="7_sheyr"]
-[ext_resource type="Material" uid="uid://cda701nn54hmj" path="res://player/mat-man.tres" id="8_cqifl"]
+[ext_resource type="PackedScene" uid="uid://dts6lgb7fcdgq" path="res://player/mysta_chibi.tscn" id="7_q6upe"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5wunt"]
 radius = 0.436977
@@ -33,7 +32,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.593098, 0)
 shape = SubResource("CapsuleShape3D_5wunt")
 
 [node name="Gun" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_r12lb")]
-transform = Transform3D(1.45124, 0, 0, 0, 0.858415, 0, 0, 0, 0.67829, -0.312383, 0.682651, 0.535756)
+transform = Transform3D(0.864, 0, 0, 0, 0.495, 0, 0, 0, 0.432, 0.066388, 0.598702, 0.422121)
 player = NodePath("..")
 shoot_cooldown = 0.2
 
@@ -63,26 +62,5 @@ collision_shape = NodePath("../Collision")
 input = NodePath("../Input")
 cooldown = 0.8
 
-[node name="AdvancedCharacter" parent="." instance=ExtResource("7_sheyr")]
-transform = Transform3D(0.167, 0, 0, 0, 0.094, 0, 0, 0, 0.167, 0, 0, 0)
-
-[node name="Body1" parent="AdvancedCharacter" index="0"]
-surface_material_override/0 = ExtResource("8_cqifl")
-
-[node name="Head1" parent="AdvancedCharacter" index="1"]
-surface_material_override/0 = ExtResource("8_cqifl")
-
-[node name="ArmLeft1" parent="AdvancedCharacter" index="2"]
-surface_material_override/0 = ExtResource("8_cqifl")
-
-[node name="ArmRight1" parent="AdvancedCharacter" index="3"]
-transform = Transform3D(1, 0, 0, 0, 0.0594427, 1.00658, 0, -0.776602, 0.0770458, 0.0101078, 8.6702, 7.62129)
-surface_material_override/0 = ExtResource("8_cqifl")
-
-[node name="LegLeft1" parent="AdvancedCharacter" index="4"]
-surface_material_override/0 = ExtResource("8_cqifl")
-
-[node name="LegRight1" parent="AdvancedCharacter" index="5"]
-surface_material_override/0 = ExtResource("8_cqifl")
-
-[editable path="AdvancedCharacter"]
+[node name="mysta_chibi" parent="." instance=ExtResource("7_q6upe")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)

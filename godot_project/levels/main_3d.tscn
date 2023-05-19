@@ -1,14 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://d0hh4hdqw0st5"]
+[gd_scene load_steps=13 format=3 uid="uid://d0hh4hdqw0st5"]
 
 [ext_resource type="PackedScene" uid="uid://d1gyxdn4mklbx" path="res://player/Player3D.tscn" id="1_3bgiy"]
 [ext_resource type="Resource" uid="uid://cr2hc4fm26xdl" path="res://player/input_def-player_3.tres" id="2_euhci"]
 [ext_resource type="Resource" uid="uid://bk3t281o8lxr" path="res://player/input_def-player_4.tres" id="2_la1ri"]
 [ext_resource type="Resource" uid="uid://bsmqkjpfu1bre" path="res://player/input_def-player_2.tres" id="2_ygu4u"]
 [ext_resource type="PackedScene" uid="uid://b17erm1kede1a" path="res://props/PlateRoad.tscn" id="5_f4jyn"]
-[ext_resource type="Material" uid="uid://c1n7qgv582rr4" path="res://player/mat-woman.tres" id="5_f77il"]
-[ext_resource type="Material" uid="uid://cavl2ec75gakx" path="res://player/mat-orc.tres" id="6_3swyg"]
 [ext_resource type="PackedScene" uid="uid://byvokmny42k4f" path="res://props/WoodBrokenWall.tscn" id="6_xxxem"]
-[ext_resource type="Material" uid="uid://bt5g885qq4b64" path="res://player/mat-robot.tres" id="8_0pdou"]
 [ext_resource type="PackedScene" uid="uid://d27jo3r72v4ly" path="res://props/CastleWall.tscn" id="11_j1rto"]
 [ext_resource type="PackedScene" uid="uid://bclfpxtm4dwvx" path="res://props/GreyCorner.tscn" id="12_nep7v"]
 
@@ -172,47 +169,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.72616, 0.245194, -13.0586)
 [node name="Input" parent="Players/Player2" index="2"]
 definition = ExtResource("2_ygu4u")
 
-[node name="Body1" parent="Players/Player2/AdvancedCharacter" index="0"]
-surface_material_override/0 = ExtResource("5_f77il")
-
-[node name="Head1" parent="Players/Player2/AdvancedCharacter" index="1"]
-surface_material_override/0 = ExtResource("5_f77il")
-
-[node name="ArmLeft1" parent="Players/Player2/AdvancedCharacter" index="2"]
-surface_material_override/0 = ExtResource("5_f77il")
-
-[node name="ArmRight1" parent="Players/Player2/AdvancedCharacter" index="3"]
-surface_material_override/0 = ExtResource("5_f77il")
-
-[node name="LegLeft1" parent="Players/Player2/AdvancedCharacter" index="4"]
-surface_material_override/0 = ExtResource("5_f77il")
-
-[node name="LegRight1" parent="Players/Player2/AdvancedCharacter" index="5"]
-surface_material_override/0 = ExtResource("5_f77il")
-
 [node name="Player3" parent="Players" instance=ExtResource("1_3bgiy")]
 transform = Transform3D(0.256019, 0, -0.966672, 0, 1, 0, 0.966672, 0, 0.256019, 15.4497, 0.245193, 1.33351)
 
 [node name="Input" parent="Players/Player3" index="2"]
 definition = ExtResource("2_euhci")
-
-[node name="Body1" parent="Players/Player3/AdvancedCharacter" index="0"]
-surface_material_override/0 = ExtResource("6_3swyg")
-
-[node name="Head1" parent="Players/Player3/AdvancedCharacter" index="1"]
-surface_material_override/0 = ExtResource("6_3swyg")
-
-[node name="ArmLeft1" parent="Players/Player3/AdvancedCharacter" index="2"]
-surface_material_override/0 = ExtResource("6_3swyg")
-
-[node name="ArmRight1" parent="Players/Player3/AdvancedCharacter" index="3"]
-surface_material_override/0 = ExtResource("6_3swyg")
-
-[node name="LegLeft1" parent="Players/Player3/AdvancedCharacter" index="4"]
-surface_material_override/0 = ExtResource("6_3swyg")
-
-[node name="LegRight1" parent="Players/Player3/AdvancedCharacter" index="5"]
-surface_material_override/0 = ExtResource("6_3swyg")
 
 [node name="Player4" parent="Players" instance=ExtResource("1_3bgiy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.632, 0.245194, -7.31083)
@@ -220,27 +181,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.632, 0.245194, -7.31083)
 [node name="Input" parent="Players/Player4" index="2"]
 definition = ExtResource("2_la1ri")
 
-[node name="Body1" parent="Players/Player4/AdvancedCharacter" index="0"]
-surface_material_override/0 = ExtResource("8_0pdou")
-
-[node name="Head1" parent="Players/Player4/AdvancedCharacter" index="1"]
-surface_material_override/0 = ExtResource("8_0pdou")
-
-[node name="ArmLeft1" parent="Players/Player4/AdvancedCharacter" index="2"]
-surface_material_override/0 = ExtResource("8_0pdou")
-
-[node name="ArmRight1" parent="Players/Player4/AdvancedCharacter" index="3"]
-surface_material_override/0 = ExtResource("8_0pdou")
-
-[node name="LegLeft1" parent="Players/Player4/AdvancedCharacter" index="4"]
-surface_material_override/0 = ExtResource("8_0pdou")
-
-[node name="LegRight1" parent="Players/Player4/AdvancedCharacter" index="5"]
-surface_material_override/0 = ExtResource("8_0pdou")
-
 [editable path="Players/Player2"]
-[editable path="Players/Player2/AdvancedCharacter"]
 [editable path="Players/Player3"]
-[editable path="Players/Player3/AdvancedCharacter"]
 [editable path="Players/Player4"]
-[editable path="Players/Player4/AdvancedCharacter"]
