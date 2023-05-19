@@ -41,7 +41,9 @@ jobs:
           lfs: true
 
       - name: 🤖 Godot Project Setup
-        run: godot -v -e --headless --quit
+        run: |
+          cd $PROJECT_PATH
+          godot -v -e --headless --quit
 
       - name: Build
         run: |
@@ -74,7 +76,9 @@ jobs:
           lfs: true
 
       - name: 🤖 Godot Project Setup
-        run: godot -v -e --headless --quit
+        run: |
+          cd $PROJECT_PATH
+          godot -v -e --headless --quit
 
       - name: Web Build
         run: |
