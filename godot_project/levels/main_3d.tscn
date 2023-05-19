@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://d0hh4hdqw0st5"]
+[gd_scene load_steps=14 format=3 uid="uid://d0hh4hdqw0st5"]
 
 [ext_resource type="PackedScene" uid="uid://d1gyxdn4mklbx" path="res://player/Player3D.tscn" id="1_3bgiy"]
+[ext_resource type="Script" path="res://scripts/Level.gd" id="1_dcqw3"]
 [ext_resource type="Resource" uid="uid://cr2hc4fm26xdl" path="res://player/input_def-player_3.tres" id="2_euhci"]
 [ext_resource type="Resource" uid="uid://bk3t281o8lxr" path="res://player/input_def-player_4.tres" id="2_la1ri"]
 [ext_resource type="Resource" uid="uid://bsmqkjpfu1bre" path="res://player/input_def-player_2.tres" id="2_ygu4u"]
@@ -31,6 +32,7 @@ adjustment_saturation = 2.53
 size = Vector3(46.4431, 8.76524, 1)
 
 [node name="main_3d" type="Node3D"]
+script = ExtResource("1_dcqw3")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.613095, 0.455189, 0.645691, -0.668229, -0.137176, 0.731199, 0.421407, -0.879765, 0.220069, -3.6055, 4.08865, -0.511324)

@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://d03bbrvt1t3p" path="res://player/input_def-player_1.tres" id="5_staei"]
 [ext_resource type="Script" path="res://scripts/CharacterBodyMovement3D.gd" id="6_ectfd"]
 [ext_resource type="Script" path="res://scripts/DodgeComponent3D.gd" id="7_prmgv"]
-[ext_resource type="PackedScene" uid="uid://dts6lgb7fcdgq" path="res://player/mysta_chibi.tscn" id="7_q6upe"]
+[ext_resource type="PackedScene" uid="uid://bq3a37spbr3he" path="res://player/mysta_chibi.tscn" id="7_q6upe"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5wunt"]
 radius = 0.436977
