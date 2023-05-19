@@ -40,10 +40,10 @@ jobs:
         with:
           lfs: true
 
-      - name: 🤖 Godot Project Setup
+      - name: Setup Export Templates
         run: |
-          cd $PROJECT_PATH
-          godot -v -e --headless --quit
+          mkdir -v -p ~/.local/share/godot/templates
+          mv /root/.local/share/godot/templates/${GODOT_VERSION}.stable ~/.local/share/godot/templates/${GODOT_VERSION}.stable
 
       - name: Build
         run: |
@@ -75,10 +75,10 @@ jobs:
         with:
           lfs: true
 
-      - name: 🤖 Godot Project Setup
+      - name: Setup Export Templates
         run: |
-          cd $PROJECT_PATH
-          godot -v -e --headless --quit
+          mkdir -v -p ~/.local/share/godot/templates
+          mv /root/.local/share/godot/templates/${GODOT_VERSION}.stable ~/.local/share/godot/templates/${GODOT_VERSION}.stable
 
       - name: Web Build
         run: |
