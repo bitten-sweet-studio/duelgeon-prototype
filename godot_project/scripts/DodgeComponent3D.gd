@@ -7,16 +7,35 @@ class_name DodgeComponent3D
 @export var is_dodging: bool
 @export var visual: Node
 @export var collision_shape: CollisionShape3D
+@export var input: PlayerInput
+@export var cooldown: float = 0.5
+@export var can_dodge: bool = true
 
 
 func dodge() -> void:
+	if !can_dodge:
+		return
+
+	can_dodge = false
+	get_tree().create_timer(cooldown).timeout.connect(disable_cooldown)
+
 	char_body_movement.is_enabled = false
 	is_dodging = true
 	visual.visible = true
 	char_body_movement.character_body.set_collision_layer_value(4, false)
 
-	var forward: Vector3 = char_body_movement.character_body.global_transform.basis.z * speed
-	char_body_movement.character_body.velocity = forward
+	var direction: Vector3
+	var movement_input: Vector2 = input.get_movement_input()
+
+	if movement_input == Vector2.ZERO:
+		direction = char_body_movement.character_body.global_transform.basis.z * speed
+	else:
+		movement_input = movement_input.normalized() * speed
+		direction.x = movement_input.x
+		direction.y = char_body_movement.character_body.velocity.y
+		direction.z = movement_input.y
+
+	char_body_movement.character_body.velocity = direction
 
 	await get_tree().create_timer(interval).timeout
 
@@ -32,3 +51,7 @@ func _physics_process(delta: float) -> void:
 		return
 
 	char_body_movement.character_body.move_and_slide()
+
+
+func disable_cooldown() -> void:
+	can_dodge = true

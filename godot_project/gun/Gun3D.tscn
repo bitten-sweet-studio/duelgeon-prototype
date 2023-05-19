@@ -10,8 +10,8 @@ bullet_spawn_point = NodePath("Tip")
 bullet_scene = ExtResource("2_5mk3w")
 bullet_speed = 10.0
 
-[node name="Tip" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125068, 0.968352)
-
 [node name="Model" parent="." instance=ExtResource("1_srps6")]
 transform = Transform3D(1.52423, 0, 0, 0, 1.52423, 0, 0, 0, 1.52423, 0, 0.111358, 0.325838)
+
+[node name="Tip" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125068, 0.968352)

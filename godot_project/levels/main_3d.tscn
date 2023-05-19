@@ -1,11 +1,14 @@
-[gd_scene load_steps=12 format=3 uid="uid://d0hh4hdqw0st5"]
+[gd_scene load_steps=16 format=3 uid="uid://d0hh4hdqw0st5"]
 
 [ext_resource type="PackedScene" uid="uid://d1gyxdn4mklbx" path="res://player/Player3D.tscn" id="1_3bgiy"]
 [ext_resource type="Resource" uid="uid://cr2hc4fm26xdl" path="res://player/input_def-player_3.tres" id="2_euhci"]
 [ext_resource type="Resource" uid="uid://bk3t281o8lxr" path="res://player/input_def-player_4.tres" id="2_la1ri"]
 [ext_resource type="Resource" uid="uid://bsmqkjpfu1bre" path="res://player/input_def-player_2.tres" id="2_ygu4u"]
 [ext_resource type="PackedScene" uid="uid://b17erm1kede1a" path="res://props/PlateRoad.tscn" id="5_f4jyn"]
+[ext_resource type="Material" uid="uid://c1n7qgv582rr4" path="res://player/mat-woman.tres" id="5_f77il"]
+[ext_resource type="Material" uid="uid://cavl2ec75gakx" path="res://player/mat-orc.tres" id="6_3swyg"]
 [ext_resource type="PackedScene" uid="uid://byvokmny42k4f" path="res://props/WoodBrokenWall.tscn" id="6_xxxem"]
+[ext_resource type="Material" uid="uid://bt5g885qq4b64" path="res://player/mat-robot.tres" id="8_0pdou"]
 [ext_resource type="PackedScene" uid="uid://d27jo3r72v4ly" path="res://props/CastleWall.tscn" id="11_j1rto"]
 [ext_resource type="PackedScene" uid="uid://bclfpxtm4dwvx" path="res://props/GreyCorner.tscn" id="12_nep7v"]
 
@@ -27,6 +30,9 @@ ssao_enabled = true
 adjustment_enabled = true
 adjustment_saturation = 2.53
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_0p36s"]
+size = Vector3(46.4431, 8.76524, 1)
+
 [node name="main_3d" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -45,18 +51,16 @@ directional_shadow_pancake_size = 18.7
 sky_mode = 1
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.707454, -0.352889, 0.612354, -0.00039743, 0.866227, 0.499651, -0.706759, -0.353723, 0.612675, 10.5559, 5.2497, -0.600607)
+transform = Transform3D(1, 0.000589992, -0.000227433, -0.00039743, 0.866227, 0.49965, 0.000491798, -0.49965, 0.866227, 14.5338, 12.2611, 19.3269)
 projection = 1
 current = true
-size = 10.411
+size = 16.88
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_lxe1g")
 
-[node name="PlateRoad" parent="." instance=ExtResource("5_f4jyn")]
-transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 4, 0, 0, 0)
-
 [node name="Scenery" type="Node3D" parent="."]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 0, 0)
 
 [node name="WoodBrokenWall01" parent="Scenery" instance=ExtResource("6_xxxem")]
 transform = Transform3D(0.513179, 0, 0.513179, 0, 0.725745, 0, -0.513179, 0, 0.513179, 6.90163, -4.76837e-07, -4.9679)
@@ -64,54 +68,179 @@ transform = Transform3D(0.513179, 0, 0.513179, 0, 0.725745, 0, -0.513179, 0, 0.5
 [node name="WoodBrokenWall02" parent="Scenery" instance=ExtResource("6_xxxem")]
 transform = Transform3D(-2.98023e-08, 0, -0.725745, 0, 0.725745, 0, 0.725745, 0, -2.98023e-08, 3.18927, -4.76837e-07, -6.9124)
 
+[node name="WoodBrokenWall04" parent="Scenery" instance=ExtResource("6_xxxem")]
+transform = Transform3D(0, 0, 0.725745, 0, 0.725745, 0, -0.725745, 0, 0, 12.738, -4.76837e-07, -12.2577)
+
+[node name="WoodBrokenWall05" parent="Scenery" instance=ExtResource("6_xxxem")]
+transform = Transform3D(0.513179, 0, -0.513179, 0, 0.725745, 0, 0.513179, 0, 0.513179, 8.738, -4.76837e-07, -11.0077)
+
+[node name="WoodBrokenWall06" parent="Scenery" instance=ExtResource("6_xxxem")]
+transform = Transform3D(0.725745, 0, -5.96046e-08, 0, 0.725745, 0, 5.96046e-08, 0, 0.725745, 12.7772, -4.76837e-07, -12.4611)
+
+[node name="WoodBrokenWall07" parent="Scenery" instance=ExtResource("6_xxxem")]
+transform = Transform3D(-0.513179, 0, -0.513179, 0, 0.725745, 0, 0.513179, 0, -0.513179, 11.5272, -4.76837e-07, -16.4611)
+
+[node name="WoodBrokenWall08" parent="Scenery" instance=ExtResource("6_xxxem")]
+transform = Transform3D(0.628514, 0, -0.362872, 0, 0.725745, 0, 0.362872, 0, 0.628514, 14.5219, -4.76837e-07, -8.17392)
+
+[node name="WoodBrokenWall09" parent="Scenery" instance=ExtResource("6_xxxem")]
+transform = Transform3D(-0.701016, 0, -0.187837, 0, 0.725745, 0, 0.187837, 0, -0.701016, 15.4394, -4.76837e-07, -12.2631)
+
 [node name="WoodBrokenWall03" parent="Scenery" instance=ExtResource("6_xxxem")]
 transform = Transform3D(-0.725745, 0, 6.15256e-08, 0, 0.725745, 0, -6.15256e-08, 0, -0.725745, 2.9747, -1.43051e-06, -3.5138)
 
+[node name="StaticBody3D" type="StaticBody3D" parent="Scenery"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.53306)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scenery/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.93019, 0, -4.76837e-07)
+shape = SubResource("BoxShape3D_0p36s")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Scenery"]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 12.5388, -4.76837e-07, -5.21173)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scenery/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.76837e-07, 0, 8.91685)
+shape = SubResource("BoxShape3D_0p36s")
+
+[node name="CastleWall01" parent="Scenery" instance=ExtResource("11_j1rto")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 7.80133, 0.240614, -6.9557)
+
+[node name="CastleWall02" parent="Scenery" instance=ExtResource("11_j1rto")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 13.4582, 0.240614, -4.12727)
+
+[node name="CastleWall03" parent="Scenery" instance=ExtResource("11_j1rto")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 19.115, 0.240614, -4.12728)
+
+[node name="CastleWall04" parent="Scenery" instance=ExtResource("11_j1rto")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 19.115, 0.240614, -16.8552)
+
+[node name="CastleWall05" parent="Scenery" instance=ExtResource("11_j1rto")]
+transform = Transform3D(0.866026, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866026, 5.68001, 0.240614, -13.3197)
+
+[node name="Walls" type="Node3D" parent="Scenery"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.326114, 0, -0.715115)
+
+[node name="GreyCorner01" parent="Scenery/Walls" instance=ExtResource("12_nep7v")]
+
+[node name="GreyCorner02" parent="Scenery/Walls" instance=ExtResource("12_nep7v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="GreyCorner03" parent="Scenery/Walls" instance=ExtResource("12_nep7v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+
+[node name="GreyCorner07" parent="Scenery/Walls" instance=ExtResource("12_nep7v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12)
+
+[node name="GreyCorner08" parent="Scenery/Walls" instance=ExtResource("12_nep7v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16)
+
+[node name="GreyCorner04" parent="Scenery/Walls" instance=ExtResource("12_nep7v")]
+transform = Transform3D(-8.9407e-08, 0, -1, 0, 1, 0, 1, 0, -8.9407e-08, -2.86102e-06, 0, -20)
+
+[node name="GreyCorner05" parent="Scenery/Walls" instance=ExtResource("12_nep7v")]
+transform = Transform3D(-8.9407e-08, 0, -1, 0, 1, 0, 1, 0, -8.9407e-08, 4, 0, -20)
+
+[node name="GreyCorner06" parent="Scenery/Walls" instance=ExtResource("12_nep7v")]
+transform = Transform3D(-8.9407e-08, 0, -1, 0, 1, 0, 1, 0, -8.9407e-08, 8, 0, -20)
+
+[node name="GreyCorner09" parent="Scenery/Walls" instance=ExtResource("12_nep7v")]
+transform = Transform3D(-8.9407e-08, 0, -1, 0, 1, 0, 1, 0, -8.9407e-08, 12, 0, -20)
+
+[node name="GreyCorner10" parent="Scenery/Walls" instance=ExtResource("12_nep7v")]
+transform = Transform3D(-8.9407e-08, 0, -1, 0, 1, 0, 1, 0, -8.9407e-08, 16, 0, -20)
+
+[node name="GreyCorner11" parent="Scenery/Walls" instance=ExtResource("12_nep7v")]
+transform = Transform3D(-8.9407e-08, 0, -1, 0, 1, 0, 1, 0, -8.9407e-08, 16, 0, -20)
+
+[node name="PlateRoad" parent="Scenery" instance=ExtResource("5_f4jyn")]
+transform = Transform3D(7, 0, 0, 0, 1, 0, 0, 0, 7, 0, 0, 0)
+
 [node name="Players" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.64126, 0, 6.37456)
 
 [node name="Player1" parent="Players" instance=ExtResource("1_3bgiy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.50261, 0.245194, -2.87423)
 
 [node name="Player2" parent="Players" instance=ExtResource("1_3bgiy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.40396, 0.245194, -9.71112)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.72616, 0.245194, -13.0586)
 
 [node name="Input" parent="Players/Player2" index="2"]
 definition = ExtResource("2_ygu4u")
 
+[node name="Body1" parent="Players/Player2/AdvancedCharacter" index="0"]
+surface_material_override/0 = ExtResource("5_f77il")
+
+[node name="Head1" parent="Players/Player2/AdvancedCharacter" index="1"]
+surface_material_override/0 = ExtResource("5_f77il")
+
+[node name="ArmLeft1" parent="Players/Player2/AdvancedCharacter" index="2"]
+surface_material_override/0 = ExtResource("5_f77il")
+
+[node name="ArmRight1" parent="Players/Player2/AdvancedCharacter" index="3"]
+surface_material_override/0 = ExtResource("5_f77il")
+
+[node name="LegLeft1" parent="Players/Player2/AdvancedCharacter" index="4"]
+surface_material_override/0 = ExtResource("5_f77il")
+
+[node name="LegRight1" parent="Players/Player2/AdvancedCharacter" index="5"]
+surface_material_override/0 = ExtResource("5_f77il")
+
 [node name="Player3" parent="Players" instance=ExtResource("1_3bgiy")]
-transform = Transform3D(0.256019, 0, -0.966672, 0, 1, 0, 0.966672, 0, 0.256019, 10.1686, 0.245193, -2.96373)
+transform = Transform3D(0.256019, 0, -0.966672, 0, 1, 0, 0.966672, 0, 0.256019, 15.4497, 0.245193, 1.33351)
 
 [node name="Input" parent="Players/Player3" index="2"]
 definition = ExtResource("2_euhci")
 
+[node name="Body1" parent="Players/Player3/AdvancedCharacter" index="0"]
+surface_material_override/0 = ExtResource("6_3swyg")
+
+[node name="Head1" parent="Players/Player3/AdvancedCharacter" index="1"]
+surface_material_override/0 = ExtResource("6_3swyg")
+
+[node name="ArmLeft1" parent="Players/Player3/AdvancedCharacter" index="2"]
+surface_material_override/0 = ExtResource("6_3swyg")
+
+[node name="ArmRight1" parent="Players/Player3/AdvancedCharacter" index="3"]
+surface_material_override/0 = ExtResource("6_3swyg")
+
+[node name="LegLeft1" parent="Players/Player3/AdvancedCharacter" index="4"]
+surface_material_override/0 = ExtResource("6_3swyg")
+
+[node name="LegRight1" parent="Players/Player3/AdvancedCharacter" index="5"]
+surface_material_override/0 = ExtResource("6_3swyg")
+
 [node name="Player4" parent="Players" instance=ExtResource("1_3bgiy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.38646, 0.245194, -9.70624)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.632, 0.245194, -7.31083)
 
 [node name="Input" parent="Players/Player4" index="2"]
 definition = ExtResource("2_la1ri")
 
-[node name="CastleWall01" parent="." instance=ExtResource("11_j1rto")]
-transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 7.80133, 0.240614, -6.9557)
+[node name="Body1" parent="Players/Player4/AdvancedCharacter" index="0"]
+surface_material_override/0 = ExtResource("8_0pdou")
 
-[node name="Walls" type="Node3D" parent="."]
+[node name="Head1" parent="Players/Player4/AdvancedCharacter" index="1"]
+surface_material_override/0 = ExtResource("8_0pdou")
 
-[node name="GreyCorner01" parent="Walls" instance=ExtResource("12_nep7v")]
+[node name="ArmLeft1" parent="Players/Player4/AdvancedCharacter" index="2"]
+surface_material_override/0 = ExtResource("8_0pdou")
 
-[node name="GreyCorner02" parent="Walls" instance=ExtResource("12_nep7v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+[node name="ArmRight1" parent="Players/Player4/AdvancedCharacter" index="3"]
+surface_material_override/0 = ExtResource("8_0pdou")
 
-[node name="GreyCorner03" parent="Walls" instance=ExtResource("12_nep7v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+[node name="LegLeft1" parent="Players/Player4/AdvancedCharacter" index="4"]
+surface_material_override/0 = ExtResource("8_0pdou")
 
-[node name="GreyCorner04" parent="Walls" instance=ExtResource("12_nep7v")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, -12)
-
-[node name="GreyCorner05" parent="Walls" instance=ExtResource("12_nep7v")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4, 0, -12)
-
-[node name="GreyCorner06" parent="Walls" instance=ExtResource("12_nep7v")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8, 0, -12)
+[node name="LegRight1" parent="Players/Player4/AdvancedCharacter" index="5"]
+surface_material_override/0 = ExtResource("8_0pdou")
 
 [editable path="Players/Player2"]
+[editable path="Players/Player2/AdvancedCharacter"]
 [editable path="Players/Player3"]
+[editable path="Players/Player3/AdvancedCharacter"]
 [editable path="Players/Player4"]
+[editable path="Players/Player4/AdvancedCharacter"]
