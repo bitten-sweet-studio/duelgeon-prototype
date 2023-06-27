@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://d1gyxdn4mklbx"]
+[gd_scene load_steps=11 format=3 uid="uid://d1gyxdn4mklbx"]
 
 [ext_resource type="Script" path="res://scripts/Player3D.gd" id="1_wupmh"]
 [ext_resource type="PackedScene" uid="uid://c1mlxiyx612fs" path="res://gun/Gun3D.tscn" id="2_r12lb"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://scripts/CharacterBodyMovement3D.gd" id="6_ectfd"]
 [ext_resource type="Script" path="res://scripts/DodgeComponent3D.gd" id="7_prmgv"]
 [ext_resource type="PackedScene" uid="uid://bq3a37spbr3he" path="res://player/mysta_chibi.tscn" id="7_q6upe"]
+[ext_resource type="Texture2D" uid="uid://difhpex0jehsb" path="res://libraries/textures/icon.svg" id="8_w1ubh"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5wunt"]
 radius = 0.436977
@@ -20,6 +21,7 @@ albedo_color = Color(0.6, 0.341176, 0.592157, 1)
 [node name="Player3D" type="CharacterBody3D" node_paths=PackedStringArray("input_component", "movement_component", "dodge_component", "gun")]
 collision_layer = 9
 collision_mask = 7
+floor_constant_speed = true
 script = ExtResource("1_wupmh")
 input_component = NodePath("Input")
 movement_component = NodePath("Movement")
@@ -32,7 +34,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.593098, 0)
 shape = SubResource("CapsuleShape3D_5wunt")
 
 [node name="Gun" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_r12lb")]
-transform = Transform3D(0.864, 0, 0, 0, 0.495, 0, 0, 0, 0.432, 0.066388, 0.598702, 0.422121)
+transform = Transform3D(0.864, 0, 0, 0, 0.495, 0, 0, 0, 0.432, 0.066388, 0.598702, 0.0965257)
 player = NodePath("..")
 shoot_cooldown = 0.2
 
@@ -43,7 +45,7 @@ definition = ExtResource("5_staei")
 [node name="Movement" type="Node" parent="." node_paths=PackedStringArray("character_body")]
 script = ExtResource("6_ectfd")
 character_body = NodePath("..")
-speed = 5.0
+speed = 3.0
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.787969, 0.0911779)
@@ -63,4 +65,8 @@ input = NodePath("../Input")
 cooldown = 0.8
 
 [node name="mysta_chibi" parent="." instance=ExtResource("7_q6upe")]
-transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+transform = Transform3D(0.540369, -0.1693, 0.198339, 0.0859166, 0.546461, 0.232376, -0.24621, -0.180881, 0.516394, 0.0602078, 0, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.354869, 0, 0, 0, -1.55118e-08, 0.354869, 0, -0.354869, -1.55118e-08, 0, 0.0255303, 1.17716)
+texture = ExtResource("8_w1ubh")

@@ -41,9 +41,7 @@ jobs:
           lfs: true
 
       - name: Setup Export Templates
-        run: |
-          mkdir -v -p ~/.local/share/godot/export_templates
-          mv /root/.local/share/godot/templates/${GODOT_VERSION}.stable ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable
+        uses: niscolas/godot-ci/.github/actions/setup-export-templates@master
 
       - name: Build
         run: |
